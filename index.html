@@ -1,60 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IronLog Privacy Policy</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IronLog — Privacy Policy</title>
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; max-width: 680px; margin: 48px auto; padding: 0 24px; color: #1a1a1a; line-height: 1.7; }
-    h1 { font-size: 2rem; font-weight: 700; margin-bottom: 4px; }
-    .date { color: #666; font-size: 0.9rem; margin-bottom: 40px; }
-    h2 { font-size: 1.1rem; font-weight: 600; margin-top: 32px; margin-bottom: 8px; }
-    p, ul { margin: 0 0 12px; }
-    ul { padding-left: 20px; }
-    a { color: #007aff; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #1a1a1a;
+      color: #e0e0e0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      padding: 40px 20px 80px;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    header {
+      margin-bottom: 48px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #ff5900;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    section {
+      margin-bottom: 36px;
+    }
+
+    section h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #ff5900;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    section p, section ul {
+      color: #aaa;
+      font-size: 0.95rem;
+    }
+
+    section ul {
+      padding-left: 20px;
+    }
+
+    section ul li {
+      margin-bottom: 4px;
+    }
+
+    a {
+      color: #ff5900;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 60px;
+      border-top: 1px solid #333;
+      padding-top: 24px;
+      color: #555;
+      font-size: 0.85rem;
+    }
   </style>
 </head>
 <body>
-  <h1>IronLog Privacy Policy</h1>
-  <p class="date">Last updated: October 1, 2026</p>
+  <div class="container">
+    <header>
+      <h1>IronLog Privacy Policy</h1>
+      <p>Last updated: October 1, 2026</p>
+    </header>
 
-  <h2>Overview</h2>
-  <p>IronLog is a local-first workout tracker. Your data lives on your device. We do not run servers that store your personal information.</p>
+    <section>
+      <h2>Overview</h2>
+      <p>IronLog is a local-first workout tracker. Your data is stored on your device and optionally synced to secure cloud servers so you can restore it on a new device. We do not sell your data or use it for advertising.</p>
+    </section>
 
-  <h2>Data Stored on Your Device</h2>
-  <ul>
-    <li>Workout sessions, exercises, and set logs</li>
-    <li>Body measurements and progress photos</li>
-    <li>Your profile (name, age, fitness goals, unit preference)</li>
-    <li>AI-generated reports you choose to save</li>
-  </ul>
-  <p>All of this data stays on your iPhone and is never uploaded to our servers.</p>
+    <section>
+      <h2>Account &amp; Sign In</h2>
+      <p>IronLog requires Sign in with Apple to enable cloud backup and AI features. Your Apple ID is used for authentication only — we never see your name or email unless you choose to share it with Apple during sign-in. Your account is managed via <a href="https://supabase.com" target="_blank">Supabase</a>, a secure cloud platform.</p>
+    </section>
 
-  <h2>AI Features</h2>
-  <p>When you use Physique Scan, Weekly Report, or the AI Workout Plan, the relevant data (photos or workout stats) is sent to Anthropic's Claude API to generate insights.</p>
-  <ul>
-    <li>Anthropic processes the data per their privacy policy at <a href="https://anthropic.com/privacy">anthropic.com/privacy</a></li>
-    <li>We do not retain a copy on any IronLog server</li>
-    <li>You will be asked for permission before any data is sent to AI</li>
-    <li>AI-generated results are for informational purposes only and are not medical advice</li>
-  </ul>
+    <section>
+      <h2>Data Stored on Your Device</h2>
+      <p>The following data is stored locally on your iPhone:</p>
+      <ul>
+        <li>Workout sessions, exercises, and set logs</li>
+        <li>Body measurements and progress photos</li>
+        <li>Your profile (age, biological sex, fitness goals, unit preference)</li>
+        <li>AI-generated reports you choose to save</li>
+      </ul>
+    </section>
 
-  <h2>Crash Reporting</h2>
-  <p>IronLog uses Apple MetricKit to collect anonymous crash diagnostics. This data cannot be used to identify you personally and stays within Apple's ecosystem.</p>
+    <section>
+      <h2>Cloud Sync (Supabase)</h2>
+      <p>When you are signed in, the following data is automatically synced to our Supabase cloud database so you can restore it on a new device:</p>
+      <ul>
+        <li>Workout sessions, exercise logs, and set logs</li>
+        <li>Body measurements</li>
+        <li>Your profile (fitness goals, body stats, unit preference)</li>
+      </ul>
+      <p style="margin-top:10px;">Your data is protected by Row-Level Security — only your account can read or write your records. See <a href="https://supabase.com/privacy" target="_blank">supabase.com/privacy</a>.</p>
+    </section>
 
-  <h2>Camera &amp; Photo Library</h2>
-  <p>Camera access is used to take progress photos for physique scanning and to add a background photo to your shareable workout card. Photos are not uploaded anywhere unless you explicitly use the Physique Scan feature, in which case the photo is sent to the Claude API for analysis only.</p>
+    <section>
+      <h2>Squad &amp; Leaderboard (CloudKit)</h2>
+      <p>If you join or create a Squad, the following data is written to Apple's CloudKit public database and is visible to other members of your squad:</p>
+      <ul>
+        <li>Your chosen display name</li>
+        <li>Weekly workout volume snapshots (total sets and volume per muscle group)</li>
+      </ul>
+      <p style="margin-top:10px;">No other personal information is shared. You can leave a squad at any time from the Squad tab.</p>
+    </section>
 
-  <h2>No Account Required</h2>
-  <p>IronLog does not require you to create an account or sign in. There is no email login and no profile linked to an external identity.</p>
+    <section>
+      <h2>AI Features</h2>
+      <p>When you use Physique Scan, Weekly Report, or the AI Workout Plan, the relevant data (photos or workout stats) is sent through our Cloudflare Worker proxy to Anthropic's Claude API to generate insights.</p>
+      <ul>
+        <li>Our Worker verifies your identity via your Supabase session — your data is never processed anonymously.</li>
+        <li>Anthropic processes the data per their privacy policy at <a href="https://anthropic.com/privacy" target="_blank">anthropic.com/privacy</a>.</li>
+        <li>We do not retain a copy of AI inputs or outputs on any IronLog server.</li>
+        <li>AI-generated results are for informational purposes only and are not medical advice.</li>
+      </ul>
+    </section>
 
-  <h2>Deleting Your Data</h2>
-  <p>You can permanently delete all your data at any time from Profile → Data → Delete All Data. This removes all workout history, measurements, and profile information from your device immediately.</p>
+    <section>
+      <h2>Camera &amp; Photo Library</h2>
+      <p>Camera access is used to take progress photos for physique scanning and to add a photo to your shareable workout card. Photos are not uploaded anywhere unless you explicitly use the Physique Scan feature, in which case the photo is sent to the Claude API for analysis only.</p>
+    </section>
 
-  <h2>Children</h2>
-  <p>IronLog is not directed at children under 13 and we do not knowingly collect data from children.</p>
+    <section>
+      <h2>Notifications</h2>
+      <p>IronLog may send you local notifications for rest timers during workouts and occasional comeback reminders if you haven't logged a workout in a while. No notification data is shared with third parties. You can disable notifications at any time in iOS Settings.</p>
+    </section>
 
-  <h2>Contact</h2>
-  <p>Questions about privacy? Email us at <a href="mailto:sanskar1127@gmail.com">sanskar1127@gmail.com</a></p>
+    <section>
+      <h2>Crash Reporting</h2>
+      <p>IronLog uses Apple MetricKit to collect anonymous crash diagnostics. This data cannot be used to identify you personally and stays within Apple's ecosystem.</p>
+    </section>
+
+    <section>
+      <h2>Deleting Your Data</h2>
+      <p>You can permanently delete all your data at any time from Profile → Data → Delete All Data. This removes all workout history, measurements, and profile information from your device and from our Supabase cloud database. Squad display names and weekly snapshots stored in CloudKit can be removed by leaving your squad before deleting.</p>
+    </section>
+
+    <section>
+      <h2>Children</h2>
+      <p>IronLog is not directed at children under 13 and we do not knowingly collect data from children.</p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>Questions about privacy? Email us at <a href="mailto:sanskar1127@gmail.com">sanskar1127@gmail.com</a></p>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 IronLog. All rights reserved.</p>
+    </footer>
+  </div>
 </body>
 </html>
